@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Aplikacja walutowa</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2857caafe5.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">Aplikacja przetwarzająca transakcje walutowe</h1>
+            <form id="app-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Kurs EUR</span>
+                  <input type="number" class="form-control" id="rateInput" placeholder="Kurs 1.00 EUR">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Nazwa</span>
+                  <input type="text" class="form-control" id="name" placeholder="Opis transakcji walutowej">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">EUR</span>
+                  <input type="number" class="form-control" id="amount" placeholder="Kwota transakcji">
+                </div>
+              </div>
+              <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">Kwota w PLN</span>
+                    <input type="number" class="form-control" id="pln" placeholder="Kwota PLN">
+                  </div>
+              </div>
+              <div class="forn-group">
+                  <input type="submit" value="Dodaj transakcje" id="addPaymentBtn" class="btn btn-dark">
+              </div>
+            </form>
+            <!-- RESULTS -->
+            <div id="results" class="pt-4">
+              <h5>Wynik</h5>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Suma w EUR</span>
+                  <input type="number" class="form-control" id="all-payments" disabled>
+                </div>
+              </div>
+              <div class="form-group">
+                <h5>Największa transakcja w EURO</h5>
+                <table class="table bg-light">
+                  <thead>
+                    <tr>
+                      <td scope="col">Nazwa transakcji</td>
+                        <td scope="col">Kwota w Euro</td>
+                        <td scope="col">Kwota w PLN</td>
+                        <td scope="col"></td>
+                    </tr>
+                  </thead>
+                  <tbody id='biggestTransaction'>
+                    <tr>
+                      <td id="maxName"></td>
+                      <td id="maxEuro"></td>
+                      <td id="maxPln"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h5>Lista wszystkich transakcji</h5>
+                <table class="table bg-light">
+                  <thead>
+                    <tr>
+                      <td scope="col">Nazwa transakcji</td>
+                      <td scope="col">Kwota w Euro</td>
+                      <td scope="col">Kwota w PLN</td>
+                      <td scope="col"></td>
+                    </tr>
+                  </thead>
+                  <tbody id='transactionsList'>         
+                  </tbody>
+                </table>
+                <div class="forn-group">
+                  <input type="submit" value="Usuń transakcje" id="delete-payment" class="btn btn-dark">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
